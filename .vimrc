@@ -20,8 +20,8 @@ noremap * *zz
 noremap # #zz
 " Ctrl + c 替换"
 noremap <C-c> yiw:%s/<C-r>0//g<Left><Left>
-noremap <C-\> ^x<Down> " Ctrl+\进行去注释
-noremap \ I#<ESC><Down> " \对改行加注释
+noremap <C-\> ^xx<Down> " Ctrl+\进行去注释
+noremap \ I# <ESC><Down> " \对改行加注释
 map <C-f> #* "让Ctrl+f变成查找当前单词
 noremap <ESC> :nohlsearch<CR><ESC> " 按ESC清除高亮的搜索结果
 noremap <esc>^[ <esc>^[
@@ -68,7 +68,7 @@ set shiftwidth=4 " 让缩进变为4个空格
 set backspace=2
 set scrolloff=5
 " 安装插件
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'itchyny/vim-cursorword'
