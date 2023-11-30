@@ -72,7 +72,28 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'itchyny/vim-cursorword'
+Plug 'navarasu/onedark.nvim'
+Plug 'pablopunk/native-sidebar.vim'
+
+Plug 'ncm2/ncm2'  
+Plug 'ncm2/ncm2-bufword'  
+Plug 'ncm2/ncm2-path'  
+Plug 'ncm2/ncm2-jedi'
+Plug 'roxma/nvim-yarp'  
 call plug#end()
+
+" 设置主题
+let g:onedark_config = {  
+    \ 'style': 'warm',  
+\}  
+colorscheme onedark
+
+let g:native_sidebar_shortcut = '<c-t>'
+" python 代码补全"
+autocmd BufEnter * call ncm2#enable_for_buffer()  
+
+" IMPORTANT: :help Ncm2PopupOpen for more information  
+set completeopt=noinsert,menuone,noselect
 
 " airline"
 " tu打开新的tab
